@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de privacidad | Suguru Infinite</title>
+  <meta
+    name="description"
+    content="Política de privacidad de Suguru Infinite: anuncios, consentimiento, errores de aplicación y datos guardados en el dispositivo."
+  >
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f6efe5;
+      --bg-accent: radial-gradient(circle at top left, rgba(239, 192, 129, 0.35), transparent 40%),
+        radial-gradient(circle at bottom right, rgba(97, 143, 128, 0.22), transparent 35%);
+      --paper: rgba(255, 249, 240, 0.94);
+      --paper-strong: #fffaf2;
+      --ink: #2f2418;
+      --ink-soft: #6d5a47;
+      --line: #a58761;
+      --shadow: #be9461;
+      --accent: #8f5f34;
+      --accent-soft: #ead6bc;
+      --link: #6c4d2f;
+      --max: 980px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #16110d;
+        --bg-accent: radial-gradient(circle at top left, rgba(198, 143, 72, 0.22), transparent 40%),
+          radial-gradient(circle at bottom right, rgba(102, 144, 126, 0.16), transparent 35%);
+        --paper: rgba(39, 29, 21, 0.94);
+        --paper-strong: #312419;
+        --ink: #f7ebdb;
+        --ink-soft: #d2bc9e;
+        --line: #97724d;
+        --shadow: #5f4226;
+        --accent: #edc38e;
+        --accent-soft: rgba(237, 195, 142, 0.14);
+        --link: #ffd9a8;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg-accent), var(--bg);
+      color: var(--ink);
+      font: 16px/1.65 "Avenir Next", "Segoe UI", Inter, Roboto, sans-serif;
+    }
+
+    a {
+      color: var(--link);
+    }
+
+    .page {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+      padding: 28px 0 40px;
+    }
+
+    .hero,
+    .panel {
+      position: relative;
+      background: var(--paper);
+      border: 2px solid var(--line);
+      border-radius: 28px;
+      box-shadow: 0 10px 0 var(--shadow);
+    }
+
+    .hero {
+      overflow: hidden;
+      padding: 28px 24px 24px;
+      margin-bottom: 24px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: auto -30px -50px auto;
+      width: 220px;
+      height: 220px;
+      border-radius: 36px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.18), transparent 45%),
+        linear-gradient(45deg, rgba(143,95,52,0.11), transparent 55%);
+      transform: rotate(16deg);
+      pointer-events: none;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 16px 0 10px;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 0.96;
+      letter-spacing: -0.04em;
+    }
+
+    .subtitle {
+      max-width: 58ch;
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: 1.04rem;
+    }
+
+    .meta {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      color: var(--ink-soft);
+      font-size: 0.92rem;
+    }
+
+    .meta span {
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.22);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .panel {
+      padding: 22px 20px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 1.15rem;
+      line-height: 1.15;
+    }
+
+    h3 {
+      margin: 22px 0 10px;
+      font-size: 1rem;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .stack {
+      display: grid;
+      gap: 18px;
+    }
+
+    .summary {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .summary-card {
+      padding: 14px 14px 13px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: var(--paper-strong);
+    }
+
+    .summary-card strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.95rem;
+    }
+
+    .footnote {
+      margin-top: 24px;
+      color: var(--ink-soft);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 860px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .page {
+        width: min(calc(100% - 20px), var(--max));
+        padding-top: 18px;
+      }
+
+      .hero,
+      .panel {
+        border-radius: 22px;
+      }
+
+      .hero {
+        padding: 22px 18px 18px;
+      }
+
+      .panel {
+        padding: 18px 16px;
+      }
+
+      .meta span {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <span class="badge">Suguru Infinite</span>
+      <h1>Política de privacidad</h1>
+      <p class="subtitle">
+        Esta política explica qué información trata Suguru Infinite, para qué se usa y qué servicios de terceros
+        intervienen cuando utilizas el juego.
+      </p>
+      <div class="meta">
+        <span>Última actualización: 14 de abril de 2026</span>
+        <span>Aplicación Android: Suguru Infinite</span>
+      </div>
+      <div class="summary">
+        <div class="summary-card">
+          <strong>Qué recoge la app</strong>
+          La app guarda progreso, récords y preferencias en tu dispositivo.
+        </div>
+        <div class="summary-card">
+          <strong>Servicios de terceros</strong>
+          Se usan Google AdMob, el flujo de consentimiento de Google y Firebase Crashlytics.
+        </div>
+        <div class="summary-card">
+          <strong>Qué no hace la app</strong>
+          No requiere cuenta, no pide nombre ni correo y no integra Firebase Analytics en la versión actual.
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="panel">
+        <h2>1. Responsable</h2>
+        <p>
+          Suguru Infinite es un juego para Android. Si necesitas contactar por un asunto relacionado con privacidad,
+          utiliza los datos de contacto publicados en la ficha de la aplicación en Google Play.
+        </p>
+
+        <h2>2. Datos que trata la app</h2>
+        <h3>Datos guardados localmente en tu dispositivo</h3>
+        <ul>
+          <li>Partidas guardadas y progreso de juego.</li>
+          <li>Mejores tiempos y estadísticas básicas relacionadas con la partida.</li>
+          <li>Preferencias de la app, como el tema visual.</li>
+          <li>Estado local de algunas funciones del juego, como el conteo diario de pistas gratis si aplica.</li>
+        </ul>
+
+        <h3>Datos tratados por servicios de terceros</h3>
+        <ul>
+          <li>Datos técnicos y publicitarios necesarios para mostrar anuncios mediante Google AdMob.</li>
+          <li>Opciones de consentimiento y privacidad gestionadas mediante la plataforma UMP de Google.</li>
+          <li>Información de errores y fallos técnicos mediante Firebase Crashlytics.</li>
+        </ul>
+
+        <h2>3. Finalidad del tratamiento</h2>
+        <ul>
+          <li>Permitir que el juego funcione correctamente y recordar tu progreso.</li>
+          <li>Mostrar anuncios en la versión con publicidad.</li>
+          <li>Gestionar el consentimiento cuando la normativa aplicable lo requiera.</li>
+          <li>Detectar y corregir fallos técnicos de la aplicación.</li>
+        </ul>
+
+        <h2>4. Datos que no solicitamos directamente</h2>
+        <p>
+          Suguru Infinite no te pide crear una cuenta y no te solicita de forma directa nombre, dirección postal,
+          número de teléfono ni correo electrónico dentro de la aplicación.
+        </p>
+      </article>
+
+      <aside class="stack">
+        <section class="panel">
+          <h2>5. Publicidad y consentimiento</h2>
+          <p>
+            La app puede mostrar anuncios de Google AdMob, incluidos formatos de banner, interstitial y anuncios
+            bonificados para algunas funciones del juego.
+          </p>
+          <p>
+            Cuando la normativa aplicable lo exige, la app utiliza la plataforma de consentimiento de Google para
+            mostrar un mensaje de privacidad y registrar tus elecciones.
+          </p>
+          <p>
+            Puedes revisar más información sobre la privacidad de Google aquí:
+            <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Google Privacy Policy</a>.
+          </p>
+        </section>
+
+        <section class="panel">
+          <h2>6. Crashlytics</h2>
+          <p>
+            La app usa Firebase Crashlytics para recibir informes de fallos y errores técnicos. Esto ayuda a mejorar
+            la estabilidad del juego.
+          </p>
+          <p>
+            Crashlytics puede procesar identificadores técnicos, estado del dispositivo e información del fallo para
+            diagnosticar el problema.
+          </p>
+          <p>
+            Más información:
+            <a
+              href="https://firebase.google.com/docs/crashlytics"
+              rel="noopener noreferrer"
+              target="_blank"
+            >Firebase Crashlytics</a>.
+          </p>
+        </section>
+
+        <section class="panel">
+          <h2>7. Almacenamiento y conservación</h2>
+          <p>
+            El progreso y las preferencias del juego se almacenan localmente en tu dispositivo mientras mantengas la
+            aplicación instalada o hasta que elimines los datos de la app.
+          </p>
+          <p>
+            Los datos tratados por servicios de terceros se conservan conforme a las políticas y plazos definidos por
+            dichos proveedores.
+          </p>
+        </section>
+
+        <section class="panel">
+          <h2>8. Menores y categorías de anuncios</h2>
+          <p>
+            La configuración publicitaria del juego intenta limitar categorías sensibles, pero la entrega de anuncios
+            depende de plataformas externas y no puede garantizar un filtrado absoluto en todos los casos.
+          </p>
+        </section>
+      </aside>
+    </section>
+
+    <section class="panel" style="margin-top: 18px;">
+      <h2>9. Tus opciones</h2>
+      <ul>
+        <li>Puedes borrar los datos de la app desde los ajustes de Android.</li>
+        <li>Puedes desinstalar la aplicación en cualquier momento.</li>
+        <li>
+          Si Google muestra opciones de privacidad o consentimiento en tu región, podrás gestionarlas desde la propia
+          app cuando estén disponibles.
+        </li>
+      </ul>
+
+      <h2>10. Cambios en esta política</h2>
+      <p>
+        Esta política puede actualizarse para reflejar cambios en la aplicación, en sus proveedores técnicos o en
+        requisitos legales. La versión vigente será la publicada en esta página.
+      </p>
+
+      <p class="footnote">
+        Referencias útiles: Google AdMob, Google User Messaging Platform (UMP) y Firebase Crashlytics.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
