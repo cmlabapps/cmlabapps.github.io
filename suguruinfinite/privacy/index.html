@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Política de privacidad | Suguru Infinite</title>
+  <title>Privacy Policy | Suguru Infinite</title>
   <meta
     name="description"
-    content="Política de privacidad de Suguru Infinite: anuncios, consentimiento, errores de aplicación y datos guardados en el dispositivo."
+    content="Suguru Infinite privacy policy: ads, consent, crash reports, and data stored on your device."
   >
   <style>
     :root {
@@ -82,6 +82,14 @@
       overflow: hidden;
       padding: 28px 24px 24px;
       margin-bottom: 24px;
+    }
+
+    .hero-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
     }
 
     .hero::before {
@@ -202,6 +210,35 @@
       font-size: 0.95rem;
     }
 
+    .lang-switch {
+      display: inline-flex;
+      gap: 8px;
+      padding: 6px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.22);
+    }
+
+    .lang-switch button {
+      border: 0;
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: transparent;
+      color: var(--ink-soft);
+      font: inherit;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .lang-switch button.active {
+      background: var(--paper-strong);
+      color: var(--accent);
+      box-shadow: inset 0 0 0 1px var(--line);
+    }
+
     .footnote {
       margin-top: 24px;
       color: var(--ink-soft);
@@ -233,6 +270,15 @@
         padding: 18px 16px;
       }
 
+      .hero-top {
+        align-items: stretch;
+      }
+
+      .lang-switch {
+        width: 100%;
+        justify-content: space-between;
+      }
+
       .meta span {
         width: 100%;
       }
@@ -242,151 +288,352 @@
 <body>
   <main class="page">
     <section class="hero">
-      <span class="badge">Suguru Infinite</span>
-      <h1>Política de privacidad</h1>
-      <p class="subtitle">
-        Esta política explica qué información trata Suguru Infinite, para qué se usa y qué servicios de terceros
-        intervienen cuando utilizas el juego.
-      </p>
-      <div class="meta">
-        <span>Última actualización: 14 de abril de 2026</span>
-        <span>Aplicación Android: Suguru Infinite</span>
-      </div>
-      <div class="summary">
-        <div class="summary-card">
-          <strong>Qué recoge la app</strong>
-          La app guarda progreso, récords y preferencias en tu dispositivo.
-        </div>
-        <div class="summary-card">
-          <strong>Servicios de terceros</strong>
-          Se usan Google AdMob, el flujo de consentimiento de Google y Firebase Crashlytics.
-        </div>
-        <div class="summary-card">
-          <strong>Qué no hace la app</strong>
-          No requiere cuenta, no pide nombre ni correo y no integra Firebase Analytics en la versión actual.
+      <div class="hero-top">
+        <span class="badge">Suguru Infinite</span>
+        <div class="lang-switch" aria-label="Language selector">
+          <button type="button" data-lang-btn="en">English</button>
+          <button type="button" data-lang-btn="es">Español</button>
         </div>
       </div>
     </section>
 
-    <section class="grid">
-      <article class="panel">
-        <h2>1. Responsable</h2>
+    <div data-lang-content="es" hidden>
+      <section class="hero">
+        <h1>Política de privacidad</h1>
+        <p class="subtitle">
+          Esta política explica qué información trata Suguru Infinite, para qué se usa y qué servicios de terceros
+          intervienen cuando utilizas el juego.
+        </p>
+        <div class="meta">
+          <span>Última actualización: 17 de abril de 2026</span>
+          <span>Aplicación Android: Suguru Infinite</span>
+        </div>
+        <div class="summary">
+          <div class="summary-card">
+            <strong>Qué recoge la app</strong>
+            La app guarda progreso, récords y preferencias en tu dispositivo.
+          </div>
+          <div class="summary-card">
+            <strong>Servicios de terceros</strong>
+            Se usan Google AdMob, el flujo de consentimiento de Google y Firebase Crashlytics.
+          </div>
+          <div class="summary-card">
+            <strong>Qué no hace la app</strong>
+            No requiere cuenta, no pide nombre ni correo y no integra Firebase Analytics en la versión actual.
+          </div>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="panel">
+          <h2>1. Responsable</h2>
+          <p>
+            Suguru Infinite es un juego para Android. Si necesitas contactar por un asunto relacionado con privacidad,
+            utiliza los datos de contacto publicados en la ficha de la aplicación en Google Play.
+          </p>
+
+          <h2>2. Datos que trata la app</h2>
+          <h3>Datos guardados localmente en tu dispositivo</h3>
+          <ul>
+            <li>Partidas guardadas y progreso de juego.</li>
+            <li>Mejores tiempos y estadísticas básicas relacionadas con la partida.</li>
+            <li>Preferencias de la app, como el tema visual.</li>
+            <li>Estado local de algunas funciones del juego, como el conteo diario de pistas gratis si aplica.</li>
+          </ul>
+
+          <h3>Datos tratados por servicios de terceros</h3>
+          <ul>
+            <li>Datos técnicos y publicitarios necesarios para mostrar anuncios mediante Google AdMob.</li>
+            <li>Opciones de consentimiento y privacidad gestionadas mediante la plataforma UMP de Google.</li>
+            <li>Información de errores y fallos técnicos mediante Firebase Crashlytics.</li>
+          </ul>
+
+          <h2>3. Finalidad del tratamiento</h2>
+          <ul>
+            <li>Permitir que el juego funcione correctamente y recordar tu progreso.</li>
+            <li>Mostrar anuncios en la versión con publicidad.</li>
+            <li>Gestionar el consentimiento cuando la normativa aplicable lo requiera.</li>
+            <li>Detectar y corregir fallos técnicos de la aplicación.</li>
+          </ul>
+
+          <h2>4. Datos que no solicitamos directamente</h2>
+          <p>
+            Suguru Infinite no te pide crear una cuenta y no te solicita de forma directa nombre, direccion postal,
+            numero de telefono ni correo electronico dentro de la aplicacion.
+          </p>
+        </article>
+
+        <aside class="stack">
+          <section class="panel">
+            <h2>5. Publicidad y consentimiento</h2>
+            <p>
+              La app puede mostrar anuncios de Google AdMob, incluidos formatos de banner, interstitial y anuncios
+              bonificados para algunas funciones del juego.
+            </p>
+            <p>
+              Cuando la normativa aplicable lo exige, la app utiliza la plataforma de consentimiento de Google para
+              mostrar un mensaje de privacidad y registrar tus elecciones.
+            </p>
+            <p>
+              Puedes revisar mas informacion sobre la privacidad de Google aqui:
+              <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Google Privacy Policy</a>.
+            </p>
+          </section>
+
+          <section class="panel">
+            <h2>6. Crashlytics</h2>
+            <p>
+              La app usa Firebase Crashlytics para recibir informes de fallos y errores tecnicos. Esto ayuda a mejorar
+              la estabilidad del juego.
+            </p>
+            <p>
+              Crashlytics puede procesar identificadores tecnicos, estado del dispositivo e informacion del fallo para
+              diagnosticar el problema.
+            </p>
+            <p>
+              Mas informacion:
+              <a
+                href="https://firebase.google.com/docs/crashlytics"
+                rel="noopener noreferrer"
+                target="_blank"
+              >Firebase Crashlytics</a>.
+            </p>
+          </section>
+
+          <section class="panel">
+            <h2>7. Almacenamiento y conservacion</h2>
+            <p>
+              El progreso y las preferencias del juego se almacenan localmente en tu dispositivo mientras mantengas la
+              aplicacion instalada o hasta que elimines los datos de la app.
+            </p>
+            <p>
+              Los datos tratados por servicios de terceros se conservan conforme a las politicas y plazos definidos por
+              dichos proveedores.
+            </p>
+          </section>
+
+          <section class="panel">
+            <h2>8. Menores y categorias de anuncios</h2>
+            <p>
+              La configuracion publicitaria del juego intenta limitar categorias sensibles, pero la entrega de anuncios
+              depende de plataformas externas y no puede garantizar un filtrado absoluto en todos los casos.
+            </p>
+          </section>
+        </aside>
+      </section>
+
+      <section class="panel" style="margin-top: 18px;">
+        <h2>9. Tus opciones</h2>
+        <ul>
+          <li>Puedes borrar los datos de la app desde los ajustes de Android.</li>
+          <li>Puedes desinstalar la aplicacion en cualquier momento.</li>
+          <li>
+            Si Google muestra opciones de privacidad o consentimiento en tu region, podras gestionarlas desde la propia
+            app cuando esten disponibles.
+          </li>
+        </ul>
+
+        <h2>10. Cambios en esta politica</h2>
         <p>
-          Suguru Infinite es un juego para Android. Si necesitas contactar por un asunto relacionado con privacidad,
-          utiliza los datos de contacto publicados en la ficha de la aplicación en Google Play.
+          Esta politica puede actualizarse para reflejar cambios en la aplicacion, en sus proveedores tecnicos o en
+          requisitos legales. La version vigente sera la publicada en esta pagina.
         </p>
 
-        <h2>2. Datos que trata la app</h2>
-        <h3>Datos guardados localmente en tu dispositivo</h3>
-        <ul>
-          <li>Partidas guardadas y progreso de juego.</li>
-          <li>Mejores tiempos y estadísticas básicas relacionadas con la partida.</li>
-          <li>Preferencias de la app, como el tema visual.</li>
-          <li>Estado local de algunas funciones del juego, como el conteo diario de pistas gratis si aplica.</li>
-        </ul>
-
-        <h3>Datos tratados por servicios de terceros</h3>
-        <ul>
-          <li>Datos técnicos y publicitarios necesarios para mostrar anuncios mediante Google AdMob.</li>
-          <li>Opciones de consentimiento y privacidad gestionadas mediante la plataforma UMP de Google.</li>
-          <li>Información de errores y fallos técnicos mediante Firebase Crashlytics.</li>
-        </ul>
-
-        <h2>3. Finalidad del tratamiento</h2>
-        <ul>
-          <li>Permitir que el juego funcione correctamente y recordar tu progreso.</li>
-          <li>Mostrar anuncios en la versión con publicidad.</li>
-          <li>Gestionar el consentimiento cuando la normativa aplicable lo requiera.</li>
-          <li>Detectar y corregir fallos técnicos de la aplicación.</li>
-        </ul>
-
-        <h2>4. Datos que no solicitamos directamente</h2>
-        <p>
-          Suguru Infinite no te pide crear una cuenta y no te solicita de forma directa nombre, dirección postal,
-          número de teléfono ni correo electrónico dentro de la aplicación.
+        <p class="footnote">
+          Referencias utiles: Google AdMob, Google User Messaging Platform (UMP) y Firebase Crashlytics.
         </p>
-      </article>
+      </section>
+    </div>
 
-      <aside class="stack">
-        <section class="panel">
-          <h2>5. Publicidad y consentimiento</h2>
-          <p>
-            La app puede mostrar anuncios de Google AdMob, incluidos formatos de banner, interstitial y anuncios
-            bonificados para algunas funciones del juego.
-          </p>
-          <p>
-            Cuando la normativa aplicable lo exige, la app utiliza la plataforma de consentimiento de Google para
-            mostrar un mensaje de privacidad y registrar tus elecciones.
-          </p>
-          <p>
-            Puedes revisar más información sobre la privacidad de Google aquí:
-            <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Google Privacy Policy</a>.
-          </p>
-        </section>
+    <div data-lang-content="en">
+      <section class="hero">
+        <h1>Privacy Policy</h1>
+        <p class="subtitle">
+          This policy explains what information Suguru Infinite processes, how it is used, and which third-party
+          services are involved when you use the game.
+        </p>
+        <div class="meta">
+          <span>Last updated: April 17, 2026</span>
+          <span>Android app: Suguru Infinite</span>
+        </div>
+        <div class="summary">
+          <div class="summary-card">
+            <strong>What the app stores</strong>
+            The app stores progress, best times, and preferences on your device.
+          </div>
+          <div class="summary-card">
+            <strong>Third-party services</strong>
+            The app uses Google AdMob, Google's consent flow, and Firebase Crashlytics.
+          </div>
+          <div class="summary-card">
+            <strong>What the app does not do</strong>
+            It does not require an account, does not ask for your name or email, and does not include Firebase Analytics in the current version.
+          </div>
+        </div>
+      </section>
 
-        <section class="panel">
-          <h2>6. Crashlytics</h2>
+      <section class="grid">
+        <article class="panel">
+          <h2>1. Controller</h2>
           <p>
-            La app usa Firebase Crashlytics para recibir informes de fallos y errores técnicos. Esto ayuda a mejorar
-            la estabilidad del juego.
+            Suguru Infinite is an Android game. If you need to contact us about a privacy-related matter, please use
+            the contact details published on the app listing in Google Play.
           </p>
-          <p>
-            Crashlytics puede procesar identificadores técnicos, estado del dispositivo e información del fallo para
-            diagnosticar el problema.
-          </p>
-          <p>
-            Más información:
-            <a
-              href="https://firebase.google.com/docs/crashlytics"
-              rel="noopener noreferrer"
-              target="_blank"
-            >Firebase Crashlytics</a>.
-          </p>
-        </section>
 
-        <section class="panel">
-          <h2>7. Almacenamiento y conservación</h2>
+          <h2>2. Data processed by the app</h2>
+          <h3>Data stored locally on your device</h3>
+          <ul>
+            <li>Saved games and gameplay progress.</li>
+            <li>Best times and basic game-related statistics.</li>
+            <li>App preferences, such as the visual theme.</li>
+            <li>Local state for some gameplay features, such as the daily free hints counter when applicable.</li>
+          </ul>
+
+          <h3>Data processed by third-party services</h3>
+          <ul>
+            <li>Technical and advertising data required to display ads through Google AdMob.</li>
+            <li>Consent and privacy choices managed through Google's UMP platform.</li>
+            <li>Crash and technical error information through Firebase Crashlytics.</li>
+          </ul>
+
+          <h2>3. Purpose of processing</h2>
+          <ul>
+            <li>To make the game work properly and remember your progress.</li>
+            <li>To show ads in the ad-supported version.</li>
+            <li>To manage consent when required by applicable law.</li>
+            <li>To detect and fix technical problems in the application.</li>
+          </ul>
+
+          <h2>4. Data we do not directly request</h2>
           <p>
-            El progreso y las preferencias del juego se almacenan localmente en tu dispositivo mientras mantengas la
-            aplicación instalada o hasta que elimines los datos de la app.
+            Suguru Infinite does not require you to create an account and does not directly ask for your name, postal
+            address, phone number, or email address inside the app.
           </p>
-          <p>
-            Los datos tratados por servicios de terceros se conservan conforme a las políticas y plazos definidos por
-            dichos proveedores.
-          </p>
-        </section>
+        </article>
 
-        <section class="panel">
-          <h2>8. Menores y categorías de anuncios</h2>
-          <p>
-            La configuración publicitaria del juego intenta limitar categorías sensibles, pero la entrega de anuncios
-            depende de plataformas externas y no puede garantizar un filtrado absoluto en todos los casos.
-          </p>
-        </section>
-      </aside>
-    </section>
+        <aside class="stack">
+          <section class="panel">
+            <h2>5. Advertising and consent</h2>
+            <p>
+              The app may show Google AdMob ads, including banner, interstitial, and rewarded formats for some
+              gameplay features.
+            </p>
+            <p>
+              When required by applicable law, the app uses Google's consent platform to show a privacy message and
+              record your choices.
+            </p>
+            <p>
+              More information about Google's privacy practices is available here:
+              <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Google Privacy Policy</a>.
+            </p>
+          </section>
 
-    <section class="panel" style="margin-top: 18px;">
-      <h2>9. Tus opciones</h2>
-      <ul>
-        <li>Puedes borrar los datos de la app desde los ajustes de Android.</li>
-        <li>Puedes desinstalar la aplicación en cualquier momento.</li>
-        <li>
-          Si Google muestra opciones de privacidad o consentimiento en tu región, podrás gestionarlas desde la propia
-          app cuando estén disponibles.
-        </li>
-      </ul>
+          <section class="panel">
+            <h2>6. Crashlytics</h2>
+            <p>
+              The app uses Firebase Crashlytics to receive crash reports and technical error information. This helps
+              improve the stability of the game.
+            </p>
+            <p>
+              Crashlytics may process technical identifiers, device state, and crash-related information to diagnose
+              problems.
+            </p>
+            <p>
+              More information:
+              <a
+                href="https://firebase.google.com/docs/crashlytics"
+                rel="noopener noreferrer"
+                target="_blank"
+              >Firebase Crashlytics</a>.
+            </p>
+          </section>
 
-      <h2>10. Cambios en esta política</h2>
-      <p>
-        Esta política puede actualizarse para reflejar cambios en la aplicación, en sus proveedores técnicos o en
-        requisitos legales. La versión vigente será la publicada en esta página.
-      </p>
+          <section class="panel">
+            <h2>7. Storage and retention</h2>
+            <p>
+              Game progress and preferences are stored locally on your device while you keep the app installed or until
+              you clear the app data.
+            </p>
+            <p>
+              Data processed by third-party services is retained according to the policies and retention periods
+              defined by those providers.
+            </p>
+          </section>
 
-      <p class="footnote">
-        Referencias útiles: Google AdMob, Google User Messaging Platform (UMP) y Firebase Crashlytics.
-      </p>
-    </section>
+          <section class="panel">
+            <h2>8. Minors and ad categories</h2>
+            <p>
+              The game's advertising configuration tries to limit sensitive categories, but ad delivery depends on
+              external platforms and cannot guarantee absolute filtering in all cases.
+            </p>
+          </section>
+        </aside>
+      </section>
+
+      <section class="panel" style="margin-top: 18px;">
+        <h2>9. Your choices</h2>
+        <ul>
+          <li>You can clear app data from Android settings.</li>
+          <li>You can uninstall the app at any time.</li>
+          <li>
+            If Google shows privacy or consent options in your region, you can manage them inside the app when they are available.
+          </li>
+        </ul>
+
+        <h2>10. Changes to this policy</h2>
+        <p>
+          This policy may be updated to reflect changes in the app, its technical providers, or legal requirements.
+          The current version will be the one published on this page.
+        </p>
+
+        <p class="footnote">
+          Useful references: Google AdMob, Google User Messaging Platform (UMP), and Firebase Crashlytics.
+        </p>
+      </section>
+    </div>
   </main>
+  <script>
+    (function () {
+      var titles = {
+        en: "Privacy Policy | Suguru Infinite",
+        es: "Politica de privacidad | Suguru Infinite"
+      };
+      var descriptions = {
+        en: "Suguru Infinite privacy policy: ads, consent, crash reports, and data stored on your device.",
+        es: "Politica de privacidad de Suguru Infinite: anuncios, consentimiento, errores de aplicacion y datos guardados en el dispositivo."
+      };
+      var supported = ["en", "es"];
+      var saved = localStorage.getItem("suguru-privacy-lang");
+      var browser = ((navigator.language || navigator.userLanguage || "en").split("-")[0] || "en").toLowerCase();
+      var initialLang = supported.indexOf(saved) >= 0 ? saved : (supported.indexOf(browser) >= 0 ? browser : "en");
+      var metaDescription = document.querySelector('meta[name="description"]');
+      var sections = document.querySelectorAll("[data-lang-content]");
+      var buttons = document.querySelectorAll("[data-lang-btn]");
+
+      function applyLanguage(lang) {
+        sections.forEach(function (section) {
+          section.hidden = section.getAttribute("data-lang-content") !== lang;
+        });
+        buttons.forEach(function (button) {
+          button.classList.toggle("active", button.getAttribute("data-lang-btn") === lang);
+          button.setAttribute("aria-pressed", button.getAttribute("data-lang-btn") === lang ? "true" : "false");
+        });
+        document.documentElement.lang = lang;
+        document.title = titles[lang];
+        if (metaDescription) {
+          metaDescription.setAttribute("content", descriptions[lang]);
+        }
+        localStorage.setItem("suguru-privacy-lang", lang);
+      }
+
+      buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          applyLanguage(button.getAttribute("data-lang-btn"));
+        });
+      });
+
+      applyLanguage(initialLang);
+    })();
+  </script>
 </body>
 </html>
