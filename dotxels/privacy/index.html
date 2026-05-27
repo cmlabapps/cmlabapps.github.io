@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy | dotXels</title>
+  <meta
+    name="description"
+    content="dotXels privacy policy: image processing, local creations, ads, consent, purchases, permissions, and exports."
+  >
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7fbfa;
+      --surface: #ffffff;
+      --surface-soft: #eef8f6;
+      --surface-strong: #e4f2ef;
+      --ink: #182326;
+      --ink-soft: #516063;
+      --line: #b8ceca;
+      --line-strong: #84aaa3;
+      --brand: #0b7773;
+      --brand-strong: #075f5b;
+      --blue: #2d6cdf;
+      --coral: #d9534f;
+      --yellow: #e3aa18;
+      --shadow: rgba(9, 70, 67, 0.14);
+      --max: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        linear-gradient(90deg, rgba(11, 119, 115, 0.055) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(11, 119, 115, 0.055) 1px, transparent 1px),
+        var(--bg);
+      background-size: 28px 28px;
+      color: var(--ink);
+      font: 16px/1.65 Inter, Roboto, "Segoe UI", system-ui, -apple-system, sans-serif;
+    }
+
+    a {
+      color: var(--brand-strong);
+      font-weight: 700;
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.18em;
+    }
+
+    .page {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+      padding: 28px 0 42px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      display: block;
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+      flex: 0 0 auto;
+      box-shadow: 0 5px 14px var(--shadow);
+    }
+
+    .brand-wordmark {
+      display: block;
+      width: clamp(132px, 22vw, 196px);
+      height: auto;
+    }
+
+    .lang-switch {
+      display: inline-flex;
+      gap: 6px;
+      padding: 4px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.84);
+      box-shadow: 0 8px 22px rgba(24, 35, 38, 0.06);
+    }
+
+    .lang-switch button {
+      border: 0;
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: transparent;
+      color: var(--ink-soft);
+      font: inherit;
+      font-size: 0.83rem;
+      font-weight: 850;
+      cursor: pointer;
+    }
+
+    .lang-switch button.active {
+      background: var(--brand);
+      color: #ffffff;
+    }
+
+    .hero,
+    .panel,
+    .summary-card {
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 10px 26px rgba(24, 35, 38, 0.08);
+    }
+
+    .hero {
+      padding: 30px 26px 24px;
+      margin-bottom: 18px;
+      overflow: hidden;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line-strong);
+      background: var(--surface-soft);
+      color: var(--brand-strong);
+      font-size: 0.76rem;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 780px;
+      margin: 16px 0 10px;
+      font-size: clamp(2.15rem, 5vw, 4.4rem);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      max-width: 72ch;
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: 1.05rem;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+      color: var(--ink-soft);
+      font-size: 0.92rem;
+    }
+
+    .meta span {
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--surface-soft);
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .summary-card {
+      padding: 14px;
+      box-shadow: none;
+    }
+
+    .summary-card strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.95rem;
+    }
+
+    .summary-card p {
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: 0.94rem;
+      line-height: 1.5;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) minmax(300px, 0.88fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .panel {
+      padding: 22px 20px;
+    }
+
+    .stack {
+      display: grid;
+      gap: 18px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 1.15rem;
+      line-height: 1.2;
+    }
+
+    h3 {
+      margin: 20px 0 8px;
+      font-size: 1rem;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .callout {
+      margin: 14px 0;
+      padding: 14px;
+      border: 1px solid var(--line-strong);
+      border-radius: 8px;
+      background: var(--surface-soft);
+    }
+
+    .links {
+      display: grid;
+      gap: 8px;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .links li {
+      margin: 0;
+    }
+
+    .footnote {
+      margin-top: 18px;
+      color: var(--ink-soft);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .summary,
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .page {
+        width: min(calc(100% - 20px), var(--max));
+        padding-top: 18px;
+      }
+
+      .topbar {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+      }
+
+      .brand-wordmark {
+        width: 150px;
+      }
+
+      .lang-switch {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .lang-switch button {
+        flex: 1;
+      }
+
+      .hero,
+      .panel {
+        padding: 18px 16px;
+      }
+
+      .meta span {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <div class="brand" aria-label="dotXels">
+        <img class="brand-mark" src="assets/dotxels_logo_mark.png" alt="" aria-hidden="true" width="42" height="42">
+        <img class="brand-wordmark" src="assets/dotxels_wordmark.png" alt="dotXels" width="1825" height="540">
+      </div>
+      <div class="lang-switch" aria-label="Language selector">
+        <button type="button" data-lang-btn="en">English</button>
+        <button type="button" data-lang-btn="es">Español</button>
+      </div>
+    </header>
+
+    <div data-lang-content="es" hidden>
+      <section class="hero">
+        <span class="badge">Aplicación Android</span>
+        <h1>Política de privacidad</h1>
+        <p class="subtitle">
+          Esta política explica cómo dotXels trata imágenes, patrones, ajustes, anuncios, compras y permisos. La app
+          está diseñada para convertir o dibujar patrones de piezas reales manteniendo el trabajo creativo en tu
+          dispositivo siempre que sea posible.
+        </p>
+        <div class="meta">
+          <span>Última actualización: 27 de mayo de 2026</span>
+          <span>Aplicación: dotXels</span>
+          <span>Paquete Android: com.cmlabapps.dotxels</span>
+        </div>
+        <div class="summary">
+          <div class="summary-card">
+            <strong>Imágenes y patrones</strong>
+            <p>Las imágenes que eliges, miniaturas, ajustes y patrones guardados se conservan localmente en la app.</p>
+          </div>
+          <div class="summary-card">
+            <strong>Publicidad y compras</strong>
+            <p>La versión gratuita puede mostrar anuncios de Google AdMob; PRO se gestiona con Google Play Billing.</p>
+          </div>
+          <div class="summary-card">
+            <strong>Sin cuenta propia</strong>
+            <p>dotXels no te pide crear cuenta ni introducir nombre, correo, teléfono o dirección postal.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="panel">
+          <h2>1. Responsable</h2>
+          <p>
+            dotXels es una aplicación Android publicada por CMLab Apps. Para consultas de privacidad, usa los datos de
+            contacto publicados en la ficha de dotXels en Google Play o en los canales oficiales de CMLab Apps.
+          </p>
+
+          <h2>2. Datos que trata la app</h2>
+          <h3>Contenido creativo guardado en tu dispositivo</h3>
+          <ul>
+            <li>Imagen original elegida desde galería o cámara cuando guardas una creación basada en imagen.</li>
+            <li>Patrones generados, patrones manuales, miniaturas, dimensiones, material, colores y recuentos de piezas.</li>
+            <li>Ajustes de conversión como recorte, brillo, contraste, saturación, gamma, tramado, bordes y tamaño de salida.</li>
+            <li>Ajustes de exportación, tamaño de secciones y preferencias como inventario de colores o tamaño de rejilla por defecto.</li>
+            <li>Estado local de PRO para recordar si la compra está activa mientras Google Play confirma el derecho de uso.</li>
+          </ul>
+
+          <div class="callout">
+            dotXels no sube tus imágenes ni patrones a servidores propios. La conversión, el dibujo manual y la
+            generación del PDF se realizan en el dispositivo.
+          </div>
+
+          <h3>Datos temporales y exportaciones</h3>
+          <ul>
+            <li>Las fotos tomadas con cámara se guardan inicialmente como archivos temporales para poder procesarlas.</li>
+            <li>Los PDF exportados se crean en la caché de la app y se comparten solo cuando decides abrir el selector de compartir.</li>
+            <li>Si compartes un PDF o archivo con otra aplicación, esa aplicación tratará el archivo conforme a sus propias políticas.</li>
+          </ul>
+
+          <h2>3. Permisos</h2>
+          <ul>
+            <li><strong>Cámara:</strong> se usa únicamente si eliges crear un patrón tomando una foto.</li>
+            <li><strong>Internet y estado de red:</strong> se usan para anuncios, consentimiento, compras PRO y servicios de Google Play.</li>
+            <li><strong>Galería/fotos:</strong> cuando eliges una imagen, Android muestra su selector de contenido. dotXels accede a la imagen que seleccionas.</li>
+          </ul>
+
+          <h2>4. Finalidades</h2>
+          <ul>
+            <li>Crear, editar, guardar y exportar patrones de piezas.</li>
+            <li>Recordar preferencias y creaciones guardadas.</li>
+            <li>Mostrar publicidad en la versión gratuita cuando corresponda.</li>
+            <li>Gestionar el consentimiento de privacidad en las regiones donde sea necesario.</li>
+            <li>Gestionar la compra PRO y restaurar el acceso adquirido.</li>
+          </ul>
+        </article>
+
+        <aside class="stack">
+          <section class="panel">
+            <h2>5. Publicidad y consentimiento</h2>
+            <p>
+              La versión gratuita de dotXels puede mostrar banners, interstitials y anuncios bonificados de Google
+              AdMob. Si tienes PRO, la app no muestra anuncios.
+            </p>
+            <p>
+              Google Mobile Ads SDK puede tratar datos como dirección IP, identificadores del dispositivo o de
+              publicidad, interacciones con anuncios y datos de diagnóstico para publicidad, medición, analítica,
+              prevención de fraude y funcionamiento del SDK.
+            </p>
+            <p>
+              En las regiones donde sea obligatorio, dotXels usa Google User Messaging Platform para mostrar opciones
+              de consentimiento y privacidad. También puedes gestionar el identificador publicitario desde los ajustes
+              de privacidad de Android.
+            </p>
+          </section>
+
+          <section class="panel">
+            <h2>6. Compras PRO</h2>
+            <p>
+              La compra única de dotXels PRO se procesa mediante Google Play Billing. dotXels recibe el estado de la
+              compra y los identificadores técnicos necesarios para activar o restaurar PRO, pero no recibe ni almacena
+              los datos completos de pago, como número de tarjeta o método de pago.
+            </p>
+          </section>
+
+          <section class="panel">
+            <h2>7. Conservación</h2>
+            <p>
+              Tus creaciones, imágenes copiadas a la app, miniaturas y preferencias permanecen en el dispositivo hasta
+              que las borres desde dotXels, elimines los datos de la app o desinstales la aplicación.
+            </p>
+            <p>
+              La caché de exportaciones puede borrarse desde ajustes de Android, por el sistema operativo o al limpiar
+              los datos de dotXels.
+            </p>
+          </section>
+
+          <section class="panel">
+            <h2>8. Menores</h2>
+            <p>
+              dotXels no está dirigida específicamente a menores por debajo de la edad mínima aplicable en cada país.
+              Si una persona menor utiliza la app, debe hacerlo con supervisión de su madre, padre o tutor legal.
+            </p>
+          </section>
+        </aside>
+      </section>
+
+      <section class="panel" style="margin-top: 18px;">
+        <h2>9. Tus opciones</h2>
+        <ul>
+          <li>Puedes no conceder cámara y seguir usando imágenes desde el selector de Android o el modo manual.</li>
+          <li>Puedes borrar creaciones desde la galería de dotXels.</li>
+          <li>Puedes borrar todos los datos desde los ajustes de Android o desinstalar la app.</li>
+          <li>Puedes cambiar o eliminar el identificador publicitario desde los ajustes de privacidad de Android.</li>
+          <li>Cuando esté disponible por región, puedes abrir las opciones de privacidad de Google desde la app.</li>
+        </ul>
+
+        <h2>10. Copias de seguridad y transferencias</h2>
+        <p>
+          Android y Google pueden ofrecer funciones de copia de seguridad o transferencia del dispositivo. Su
+          comportamiento depende de los ajustes del sistema, la cuenta de Google y la configuración instalada de la app.
+          Puedes revisar o desactivar estas funciones desde los ajustes de Android.
+        </p>
+
+        <h2>11. Servicios de terceros</h2>
+        <ul class="links">
+          <li><a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Política de privacidad de Google</a></li>
+          <li><a href="https://policies.google.com/technologies/ads" rel="noopener noreferrer" target="_blank">Cómo usa Google los datos en publicidad</a></li>
+          <li><a href="https://developers.google.com/admob/android/privacy/play-data-disclosure" rel="noopener noreferrer" target="_blank">Divulgación de datos de Google Mobile Ads SDK</a></li>
+          <li><a href="https://support.google.com/admob/answer/10107561" rel="noopener noreferrer" target="_blank">Privacidad y mensajes de Google AdMob</a></li>
+          <li><a href="https://support.google.com/googleplay/answer/11174377" rel="noopener noreferrer" target="_blank">Compras y facturación de Google Play</a></li>
+        </ul>
+
+        <h2>12. Cambios en esta política</h2>
+        <p>
+          Esta política puede actualizarse para reflejar cambios en dotXels, en sus servicios técnicos o en requisitos
+          legales. La versión vigente será la publicada en esta página.
+        </p>
+
+        <p class="footnote">
+          Esta política describe la versión Android actual de dotXels y debe revisarse cuando se añadan nuevos SDKs,
+          analítica, sincronización en la nube o funciones premium adicionales.
+        </p>
+      </section>
+    </div>
+
+    <div data-lang-content="en">
+      <section class="hero">
+        <span class="badge">Android app</span>
+        <h1>Privacy Policy</h1>
+        <p class="subtitle">
+          This policy explains how dotXels handles images, patterns, settings, ads, purchases, and permissions. The app
+          is designed to convert or draw real-piece patterns while keeping your creative work on your device whenever
+          possible.
+        </p>
+        <div class="meta">
+          <span>Last updated: May 27, 2026</span>
+          <span>App: dotXels</span>
+          <span>Android package: com.cmlabapps.dotxels</span>
+        </div>
+        <div class="summary">
+          <div class="summary-card">
+            <strong>Images and patterns</strong>
+            <p>Selected images, thumbnails, settings, and saved patterns are stored locally by the app.</p>
+          </div>
+          <div class="summary-card">
+            <strong>Ads and purchases</strong>
+            <p>The free version may show Google AdMob ads; PRO access is handled through Google Play Billing.</p>
+          </div>
+          <div class="summary-card">
+            <strong>No app account</strong>
+            <p>dotXels does not ask you to create an account or enter your name, email, phone number, or postal address.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="panel">
+          <h2>1. Controller</h2>
+          <p>
+            dotXels is an Android app published by CMLab Apps. For privacy questions, use the contact details published
+            on the dotXels Google Play listing or the official CMLab Apps channels.
+          </p>
+
+          <h2>2. Data processed by the app</h2>
+          <h3>Creative content stored on your device</h3>
+          <ul>
+            <li>The original image selected from your gallery or camera when you save an image-based creation.</li>
+            <li>Generated patterns, manual patterns, thumbnails, dimensions, material, colors, and piece counts.</li>
+            <li>Conversion settings such as crop, brightness, contrast, saturation, gamma, dithering, edges, and output size.</li>
+            <li>Export settings, section size, and preferences such as color inventory or default grid size.</li>
+            <li>Local PRO state used to remember whether the purchase is active while Google Play confirms entitlement.</li>
+          </ul>
+
+          <div class="callout">
+            dotXels does not upload your images or patterns to our own servers. Conversion, manual drawing, and PDF
+            generation happen on the device.
+          </div>
+
+          <h3>Temporary data and exports</h3>
+          <ul>
+            <li>Photos taken with the camera are initially saved as temporary files so they can be processed.</li>
+            <li>Exported PDFs are created in the app cache and shared only when you choose to open the Android share sheet.</li>
+            <li>If you share a PDF or file with another app, that app handles the file under its own privacy policy.</li>
+          </ul>
+
+          <h2>3. Permissions</h2>
+          <ul>
+            <li><strong>Camera:</strong> used only if you choose to create a pattern by taking a photo.</li>
+            <li><strong>Internet and network state:</strong> used for ads, consent, PRO purchases, and Google Play services.</li>
+            <li><strong>Gallery/photos:</strong> when you choose an image, Android shows its content picker. dotXels accesses the image you select.</li>
+          </ul>
+
+          <h2>4. Purposes</h2>
+          <ul>
+            <li>Create, edit, save, and export piece patterns.</li>
+            <li>Remember preferences and saved creations.</li>
+            <li>Show ads in the free version where applicable.</li>
+            <li>Manage privacy consent in regions where it is required.</li>
+            <li>Manage the PRO purchase and restore purchased access.</li>
+          </ul>
+        </article>
+
+        <aside class="stack">
+          <section class="panel">
+            <h2>5. Advertising and consent</h2>
+            <p>
+              The free version of dotXels may show banner, interstitial, and rewarded ads from Google AdMob. If you
+              have PRO, the app does not show ads.
+            </p>
+            <p>
+              Google Mobile Ads SDK may process data such as IP address, device or advertising identifiers, ad
+              interactions, and diagnostic data for advertising, measurement, analytics, fraud prevention, and SDK
+              operation.
+            </p>
+            <p>
+              In regions where this is required, dotXels uses Google User Messaging Platform to show consent and
+              privacy options. You can also manage the advertising identifier from Android privacy settings.
+            </p>
+          </section>
+
+          <section class="panel">
+            <h2>6. PRO purchases</h2>
+            <p>
+              The one-time dotXels PRO purchase is processed through Google Play Billing. dotXels receives the purchase
+              state and technical identifiers needed to activate or restore PRO, but does not receive or store full
+              payment details such as card number or payment method.
+            </p>
+          </section>
+
+          <section class="panel">
+            <h2>7. Retention</h2>
+            <p>
+              Your creations, images copied into the app, thumbnails, and preferences remain on the device until you
+              delete them from dotXels, clear app data, or uninstall the application.
+            </p>
+            <p>
+              Export cache may be cleared from Android settings, by the operating system, or when you clear dotXels app
+              data.
+            </p>
+          </section>
+
+          <section class="panel">
+            <h2>8. Children</h2>
+            <p>
+              dotXels is not specifically directed to children under the minimum age applicable in each country. If a
+              child uses the app, they should do so with supervision from a parent or legal guardian.
+            </p>
+          </section>
+        </aside>
+      </section>
+
+      <section class="panel" style="margin-top: 18px;">
+        <h2>9. Your choices</h2>
+        <ul>
+          <li>You can deny camera permission and still use images through the Android picker or use manual mode.</li>
+          <li>You can delete creations from the dotXels gallery.</li>
+          <li>You can clear all app data from Android settings or uninstall the app.</li>
+          <li>You can reset or delete the advertising identifier from Android privacy settings.</li>
+          <li>Where available by region, you can open Google privacy options from inside the app.</li>
+        </ul>
+
+        <h2>10. Backups and device transfers</h2>
+        <p>
+          Android and Google may offer device backup or transfer features. Their behavior depends on system settings,
+          your Google account, and the installed app configuration. You can review or disable these features in Android
+          settings.
+        </p>
+
+        <h2>11. Third-party services</h2>
+        <ul class="links">
+          <li><a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Google Privacy Policy</a></li>
+          <li><a href="https://policies.google.com/technologies/ads" rel="noopener noreferrer" target="_blank">How Google uses data in advertising</a></li>
+          <li><a href="https://developers.google.com/admob/android/privacy/play-data-disclosure" rel="noopener noreferrer" target="_blank">Google Mobile Ads SDK data disclosure</a></li>
+          <li><a href="https://support.google.com/admob/answer/10107561" rel="noopener noreferrer" target="_blank">Google AdMob Privacy &amp; messaging</a></li>
+          <li><a href="https://support.google.com/googleplay/answer/11174377" rel="noopener noreferrer" target="_blank">Google Play purchases and billing</a></li>
+        </ul>
+
+        <h2>12. Changes to this policy</h2>
+        <p>
+          This policy may be updated to reflect changes in dotXels, its technical services, or legal requirements. The
+          current version will be the one published on this page.
+        </p>
+
+        <p class="footnote">
+          This policy describes the current Android version of dotXels and should be reviewed when new SDKs, analytics,
+          cloud sync, or additional premium features are added.
+        </p>
+      </section>
+    </div>
+  </main>
+  <script>
+    (function () {
+      var titles = {
+        en: "Privacy Policy | dotXels",
+        es: "Política de privacidad | dotXels"
+      };
+      var descriptions = {
+        en: "dotXels privacy policy: image processing, local creations, ads, consent, purchases, permissions, and exports.",
+        es: "Política de privacidad de dotXels: procesamiento de imágenes, creaciones locales, anuncios, consentimiento, compras, permisos y exportaciones."
+      };
+      var supported = ["en", "es"];
+      var saved = localStorage.getItem("dotxels-privacy-lang");
+      var browser = ((navigator.language || navigator.userLanguage || "en").split("-")[0] || "en").toLowerCase();
+      var initialLang = supported.indexOf(saved) >= 0 ? saved : (supported.indexOf(browser) >= 0 ? browser : "en");
+      var metaDescription = document.querySelector('meta[name="description"]');
+      var sections = document.querySelectorAll("[data-lang-content]");
+      var buttons = document.querySelectorAll("[data-lang-btn]");
+
+      function applyLanguage(lang) {
+        sections.forEach(function (section) {
+          section.hidden = section.getAttribute("data-lang-content") !== lang;
+        });
+        buttons.forEach(function (button) {
+          var active = button.getAttribute("data-lang-btn") === lang;
+          button.classList.toggle("active", active);
+          button.setAttribute("aria-pressed", active ? "true" : "false");
+        });
+        document.documentElement.lang = lang;
+        document.title = titles[lang];
+        if (metaDescription) {
+          metaDescription.setAttribute("content", descriptions[lang]);
+        }
+        localStorage.setItem("dotxels-privacy-lang", lang);
+      }
+
+      buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          applyLanguage(button.getAttribute("data-lang-btn"));
+        });
+      });
+
+      applyLanguage(initialLang);
+    })();
+  </script>
+</body>
+</html>
